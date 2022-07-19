@@ -9,6 +9,7 @@
 # Вспомните начальную школу и попробуйте написать сложение и умножение в столбик.
 
 from collections import deque
+import timeit
 
 
 def sum_hex(a, b):
@@ -50,12 +51,14 @@ def mul_hex(a, b):
         return deque(result)
 
 
-num1 = deque(input('Введите первое число: '))
-num2 = deque(input('Введите второе число: '))
-operation = input('Введите операцию которую вы хотите произвести + или *: ')
-if operation == '+':
-    print(sum_hex(num1, num2))
-elif operation == "*":
-    print(mul_hex(num1, num2))
-else:
-    print('Знак операции неверный!')
+# num1 = deque(input('Введите первое число: '))
+# num2 = deque(input('Введите второе число: '))
+num1 = deque(['A', '2'])
+num2 = deque(['A', '2'])
+# operation = input('Введите операцию которую вы хотите произвести + или *: ')
+# if operation == '+':
+print(sum_hex(num1.copy(), num2.copy()))
+# elif operation == "*":
+print(mul_hex(num1, num2))
+# else:
+#     print('Знак операции неверный!')
